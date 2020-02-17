@@ -24,7 +24,7 @@ body {
     display: grid;
     height: 50px;
     background: black;
-    color: white;
+    color: #a6baf6;
     text-align: center;
     font-size: 2em;
     margin: 0;
@@ -32,7 +32,7 @@ body {
     padding-bottom: 5px;
 }
 
-#gallery {
+#mGallery {
     background-color: #506296;
     grid-area: gallery;
     display: grid;
@@ -40,17 +40,26 @@ body {
     overflow-x: hidden;
 }
 
+#uGallery {
+    background-color: #506296;
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(150px, auto));
+    /* align-content: space-around; */
+    overflow-x: hidden;
+}
+
 #footer {
     grid-area: footer;
     height: 40px;
     background: black;
-    color: white;
+    color: #a6baf6;
     text-align: left;
     font-size: 1em;
     padding: 30px 10px 0px 20px;
 }
 
-.infoSpace {
+.mInfoSpace {
     display: grid;
     background-color: #a6baf6;
     font-size: 16px;
@@ -60,8 +69,18 @@ body {
     margin: 8px;
 }
 
+.uInfoSpace {
+    display: grid;
+    background-color: #a6baf6;
+    font-size: 16px;
+    width: 130px;
+    height: 160px;
+    padding: 10px;
+    margin: 10px 4px;
+}
+
 @media (max-width: 470px){
-    .infoSpace{
+    .mInfoSpace{
         margin-left: 0;
         max-width: 98vw;
         height: 480px;

@@ -5,6 +5,7 @@ const path = require('path');
 require('dotenv').config();
 const port = process.env.PORT || '3000';
 const movieInfo = require('./models/mList');
+const userInfo = require('./models/uList');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -15,7 +16,7 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/random', (req, res) => {
-    res.render('main/random', {name: 'Bill'})
+    res.render('main/random', {userInfo})
 });
 
 app.get('/movies', (req, res) => {
